@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Симуляция Мозга и Сознания</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="controls">
+            <h1>Симуляция Мозга</h1>
+            <div class="control-group">
+                <label for="speedSlider">Скорость времени</label>
+                <input type="range" id="speedSlider" min="0" max="200" value="100">
+                <span id="speedValue">1.0x</span>
+            </div>
+            <div class="control-group">
+                <label for="stimulusSlider">Внешний стимул</label>
+                <input type="range" id="stimulusSlider" min="0" max="100" value="5">
+            </div>
+            <div class="control-group">
+                <button id="sleepBtn">Сон</button>
+                <button id="damageBtn">Повредить зону</button>
+                <button id="resetBtn">Сброс</button>
+            </div>
+            <div class="info-panel">
+                <h3>Состояние</h3>
+                <p>Сознание: <span id="consciousnessLevel">0.50</span></p>
+                <p>Внимание: <span id="attentionFocus">Нет</span></p>
+                <p>Дом. эмоция: <span id="dominantEmotion">Спокойствие</span></p>
+            </div>
+            <div class="thought-stream">
+                <h3>Поток мыслей</h3>
+                <div id="thoughtLog"></div>
+            </div>
+        </div>
+        <canvas id="brainCanvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
